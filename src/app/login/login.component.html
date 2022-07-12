@@ -1,3 +1,22 @@
 <div>
-    Login Side!
+  <h2>Login Here!</h2>
+  <form>
+    <div class="mb-3">
+      <label for="txtusername" class="form-label">Email address</label>
+      <input type="email"
+       class="form-control"
+       name="username"
+       id="txtusername"
+       [(ngModel)]="loginData.username">
+    </div>
+    <div class="mb-3">
+      <label for="txtpassword" class="form-label">Password</label>
+      <input type="password"
+       class="form-control"
+       name="pasword"
+        id="txtpassword"
+        [(ngModel)]="loginData.password">
+    </div>
+    <button (click)="userLogin()" type="submit" class="btn btn-primary">Submit</button>
+  </form>
 </div>
