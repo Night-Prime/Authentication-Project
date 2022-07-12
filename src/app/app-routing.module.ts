@@ -7,7 +7,11 @@ const routes: Routes = [{
 }, {
   path: 'login',
   loadChildren: () => import('./login/login.module').then(_ =>_.LoginModule)
+},{
+  path:'dashboard',
+  loadChildren:() => import('./dashboard/dashboard.module').then(_ => _.DashboardModule)
 }];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
